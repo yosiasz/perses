@@ -36,7 +36,7 @@ function HomeView(): ReactElement {
   const isMobileSize = useIsMobileSize();
   const userProjects = useDashboardCreateAllowedProjects();
   const isEphemeralDashboardEnabled = useIsEphemeralDashboardEnabled();
-  const { t } = useTranslation("dashboard");
+  const { t: translate } = useTranslation("dashboard");
 
   const handleAddProjectDialogSubmit = (entity: ProjectResource): void => navigate(`/projects/${entity.metadata.name}`);
   const handleAddDashboardDialogSubmit = (dashboardSelector: DashboardSelector): void =>
@@ -65,11 +65,11 @@ function HomeView(): ReactElement {
         <Stack direction="row" alignItems="center" justifyContent="space-between">
           <StackCrumb>
             <HomeIcon fontSize="large" />
-            <TitleCrumb>{t("dashboard.home")}</TitleCrumb>
+            <TitleCrumb>{translate("dashboard.home")}</TitleCrumb>
           </StackCrumb>
           <Stack direction="row" gap={isMobileSize ? 0.5 : 2}>
             <CRUDButton action="create" scope="Project" variant="contained" onClick={handleAddProjectDialogOpen}>
-              {t("dashboard.add_project")}
+              {translate("add_project")}
             </CRUDButton>
 
             <ButtonMenu>
@@ -78,10 +78,10 @@ function HomeView(): ReactElement {
                 onClick={handleAddDashboardDialogOpen}
                 disabled={userProjects.length === 0}
               >
-                {t("add_dashboard")}
+                {translate("add_dashboard")}
               </CRUDButton>
               <MenuItem component={RouterLink} to={ImportRoute} disabled={userProjects.length === 0}>
-                <CRUDButton style={{ backgroundColor: 'transparent' }}>{t("dashboard.import_dashboard")}</CRUDButton>
+                <CRUDButton style={{ backgroundColor: 'transparent' }}>{translate("import_dashboard")}</CRUDButton>
               </MenuItem>
             </ButtonMenu>
             <CreateProjectDialog
