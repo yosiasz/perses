@@ -1,4 +1,16 @@
 {
   "important_dashboards": "Important Dashboards",
-  "projects_and_dashboards": "Projects & Dashboards"
+  "projects_and_dashboards": "Projects & Dashboards",
+  "home": "Home",
+  "add_project": "Add Project",
+  "add_dashboard": "Add Dashboard",
+  "import_dashboard": "Import Dashboard", 
+  "dashboard": {
+    "important_dashboards": "Important Dashboards",
+    "projects_and_dashboards": "Projects & Dashboards",
+    "home": "Home",
+    "add_project": "Add Project",
+    "add_dashboard": "Add Dashboard",
+    "import_dashboard": "Import Dashboard"
+  }
 }

@@ -1,0 +1,11 @@
+common:
+  save: "Save"
+  cancel: "Cancel"
+
+dashboard:
+  title: "Dashboard"
+  empty: "No data available"
+
+errors:
+  network: "Network error"
+  forbidden: "Access denied"
